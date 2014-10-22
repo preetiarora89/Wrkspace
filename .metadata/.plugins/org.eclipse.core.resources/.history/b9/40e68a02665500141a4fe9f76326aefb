@@ -1,0 +1,14 @@
+
+public class StringTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s=new String("ABC");
+		String str="ABC";
+		System.out.println(s==str.intern());
+	}
+
+}

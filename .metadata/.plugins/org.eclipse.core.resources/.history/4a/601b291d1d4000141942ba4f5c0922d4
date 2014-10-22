@@ -1,0 +1,16 @@
+
+public class TestInterface {
+	
+	interface innerInterf
+	{
+		public void get();
+	}
+	class innerCl implements innerInterf
+	{
+		public void get()
+		{
+			System.out.println("inner interface");
+		}
+	}
+
+}

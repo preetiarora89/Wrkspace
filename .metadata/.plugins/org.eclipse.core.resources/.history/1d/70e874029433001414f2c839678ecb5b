@@ -1,0 +1,16 @@
+
+public class test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static boolean get(int a)
+	{
+		return (a>5);
+	}
+
+}

@@ -1,0 +1,54 @@
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.Map.Entry;
+
+/**
+ * 
+ */
+
+/**
+ * @author preeti
+ *
+ */
+public class classInterface {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		TreeMap< A,  String> treeMap=new TreeMap< A,  String>(new Comparator<A>() {
+			@Override
+			public int compare(A o1, A o2) {
+				return 1;
+			}
+		});
+		treeMap.put(new A(4), "4");
+		treeMap.put(new A(1), "1");
+		treeMap.put(new A(1), "2");
+		treeMap.put(new A(3), "3");
+		
+		for(Entry< A,  String> e:treeMap.entrySet())
+		{
+			System.out.println("key "+e.getKey()+" value "+e.getValue());
+		}
+	}
+
+}
+class A 
+{
+	int x;
+	A(int x){
+		this.x=x;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof A)
+			return x==((A)obj).x;
+	}
+	@Override
+	public String toString() {
+		return "A@"+String.valueOf(x);
+	}
+}

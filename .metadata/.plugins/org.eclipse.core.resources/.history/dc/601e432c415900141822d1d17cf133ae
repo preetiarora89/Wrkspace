@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package com.test;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.Reader;
+import java.util.HashMap;
+
+/**
+ * @author preeti
+ *
+ */
+public class CompanyShareTest {
+
+	
+	/**
+	 * @param csv fileName
+	 */
+	/*Read file and get max rate*/
+	public static HashMap<String,CompanyShare> readAndFindMaxShare(String fileName)
+	{
+		HashMap<String,CompanyShare> companyData=new HashMap<String,CompanyShare>();
+		try
+		{
+			Reader fileReader=new FileReader(fileName);
+			BufferedReader br=new BufferedReader(fileReader);
+			String line=null;
+			String[] strArr=null;
+			if((line=br.readLine())!=null)
+			{
+				strArr=line.split(",");
+				if(strArr.length>2)
+					for(int ind=2;ind<strArr.length;ind++)
+						companyData.put(strArr[ind], new CompanyShare(strArr[2], "0", "0", 0.0));
+			}
+			while((line=br.readLine())!=null)
+			{
+				strArr=line.split(",");
+				
+			}
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+		return companyData;
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
